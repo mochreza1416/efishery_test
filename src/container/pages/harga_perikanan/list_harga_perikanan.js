@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import StyleWrapper from "../../../utils/doPageWrapper.style";
-import LayoutContentWrapper from "../../../utils/layoutWrapper";
+import {LayoutContentWrappers} from "../../../utils/layoutWrapper";
 import { columnHargaIkan } from "./column_harga_ikan";
 import Table from "../../../components/Table/list_table";
 import Pagination from "../../../components/Pagination/pagination";
@@ -87,10 +87,10 @@ class listHargaPerikanan extends Component {
   render() {
     return (
       <StyleWrapper>
-        <LayoutContentWrapper style={{ height: "auto" }}>
+        <LayoutContentWrappers style={{ height: "auto" }}>
           {/* {console.log("render")} */}
           {this.mapTableHargaPerikanan()}
-        </LayoutContentWrapper>
+        </LayoutContentWrappers>
       </StyleWrapper>
     );
   }

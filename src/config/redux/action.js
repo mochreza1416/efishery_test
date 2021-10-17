@@ -140,7 +140,37 @@ const apiHargaPerikananDelete = () => {
     }
 }
 
- const products = { producType,productAction,apiHargaPerikananFetch,apiHargaPerikananPost,apiHargaPerikananPut,apiHargaPerikananDelete };
+ const apiOptionArea = () => {
+    return new Promise(async (resolve, reject) => {
+      const uri = 'https://stein.efishery.com/v1/storages/5e1edf521073e315924ceab4/option_area';
+      try {
+        const response = await axios({
+          method: 'GET',
+          url: uri
+        });
+        resolve(response);
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
+
+  const apiOptionSize = () => {
+    return new Promise(async (resolve, reject) => {
+      const uri = 'https://stein.efishery.com/v1/storages/5e1edf521073e315924ceab4/option_size';
+      try {
+        const response = await axios({
+          method: 'GET',
+          url: uri
+        });
+        resolve(response);
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
+
+ const products = {apiOptionArea, apiOptionSize, producType,productAction,apiHargaPerikananFetch,apiHargaPerikananPost,apiHargaPerikananPut,apiHargaPerikananDelete };
 
  export default products;
 
