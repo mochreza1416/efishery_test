@@ -1,6 +1,7 @@
 {
   "name": "efishery_test",
   "version": "0.1.0",
+  "homepage": "https://moch-reza.com/",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.3.0",
